@@ -30,9 +30,9 @@
 		                        <td><?=$contact['name'];?></td>
 		                        <td><?=$contact['number'];?></td>
 		                        <td>
-		                        	<a href="/index?page=phonebook&action=view&id=<?=$contact['id'];?>">View</a>
-		                                <a href="/index?page=phonebook&action=edit&id=<?=$contact['id'];?>">Edit</a>
-		                                <a href="/index?page=phonebook&action=delete&id=<?=$contact['id'];?>">Delete</a>
+		                        	<a href="/index.php?page=phonebook&action=view&id=<?=$contact['id'];?>">View</a>
+		                                <a href="/index.php?page=phonebook&action=edit&id=<?=$contact['id'];?>">Edit</a>
+		                                <a href="/index.php?page=phonebook&action=delete&id=<?=$contact['id'];?>">Delete</a>
 		                        </td>
 		                </tr>
 		             	<?php 
