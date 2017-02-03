@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Simple PHP - Login</title>
-	<head>
+	</head>
 	<body>
 		<h2>Login Page</h2>
 	</body>	
