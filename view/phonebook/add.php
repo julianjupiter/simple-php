@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Simple PHP - Phonebook - Add</title>
-	<head>
+	</head>
 	<body>
 		<h2>Phonebook</h2>
 		<p>
