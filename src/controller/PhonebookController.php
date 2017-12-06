@@ -1,22 +1,24 @@
 <?php
-class PhonebookPage {
+class PhonebookController {
 	private $phonebook;
 	
 	public function __construct() {
-		include_once __DIR__ . '/../dao/Phonebook.php';
+		include_once __DIR__ . '/../model/Phonebook.php';
 		$this->phonebook = new Phonebook();
 	}
 	
 	public function index() {
 		$contacts = $this->phonebook->findAll();
-		include_once __DIR__ . '/../view/phonebook/index.php';
+		$page = 'phonebook';
+		include_once __DIR__ . '/../../view/templates/phonebook/index.php';
 	}
 	
 	public function add() {
 		$httpMethod = isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'GET';
 		
 		if ($httpMethod == 'GET') {
-			include_once __DIR__ . '/../view/phonebook/add.php';
+			$page = 'phonebook';
+			include_once __DIR__ . '/../../view/templates/phonebook/add.php';
 		}
 		
 		if ($httpMethod == 'POST') {
@@ -35,6 +37,7 @@ class PhonebookPage {
 	}
 	public function view($id) {
 		$contact = $this->phonebook->findContactById($id);
-		include_once __DIR__ . '/../view/phonebook/view.php';
+		$page = 'phonebook';
+		include_once __DIR__ . '/../../view/templates/phonebook/view.php';
     }	
 }

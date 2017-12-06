@@ -7,8 +7,8 @@ if ($httpMethod == 'GET') {
 	
 	switch($page) {
 		case 'auth':
-			include_once __DIR__ .'/page/AuthPage.php';
-			$auth = new AuthPage();
+			include_once __DIR__ .'/src/controller/AuthController.php';
+			$auth = new AuthController();
 			if ($action == 'login') {
 				$auth->login();	
 			}
@@ -16,8 +16,8 @@ if ($httpMethod == 'GET') {
 			break;
 			
 		case 'phonebook':
-			include_once __DIR__ .'/page/PhonebookPage.php';
-			$phonebook = new PhonebookPage();
+			include_once __DIR__ .'/src/controller/PhonebookController.php';
+			$phonebook = new PhonebookController();
 			
 			if ($action == 'index') {
 				$phonebook->index();	
@@ -33,8 +33,8 @@ if ($httpMethod == 'GET') {
 			break;
 			
 		default:		
-			include_once __DIR__ .'/page/HomePage.php';
-			$home = new HomePage();
+			include_once __DIR__ .'/src/controller/HomeController.php';
+			$home = new HomeController();
 			$home->index();
 			break;
 	}
@@ -46,8 +46,8 @@ if ($httpMethod == 'POST') {
 	
 	switch($page) {
 		case 'phonebook':
-			include_once __DIR__ .'/page/PhonebookPage.php';
-			$phonebook = new PhonebookPage();
+			include_once __DIR__ .'/src/controller/PhonebookController.php';
+			$phonebook = new PhonebookController();
 			
 			if ($action == 'add') {
 				$phonebook->add();	
